@@ -110,8 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
   respuesta: "¡Soy BelyBot! Un asistente virtual diseñado para ayudarte con información sobre la empresa."
 },
 {
-  claves: ["días festivos", "descansos", "vacaciones"],
+  claves: ["dias festivos", "descansos", "vacaciones"],
   respuesta: "Respetamos los días festivos oficiales y ofrecemos vacaciones conforme a la ley y antigüedad del trabajador."
+}
+,
+{
+  claves: ["comedor", "comida", "almuerzo", "desayuno"],
+  respuesta: "Contamos con un comedor subsidiado."
+},
+{
+  claves: ["historia", "historia de la empresa", "cuando se fundo","fundada"],
+  respuesta: "CHABELY COMPONENTES, constituida con ese nombre por estrategia corporativa en 2020 y desde entonces hemos crecido y evolucionado en el sector."
 }
 
     ];
@@ -123,10 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
         response = r.respuesta;
         appendMessage("ChabelyBot", response);
         if (r.cerrar) {
-          setTimeout(() => {
-            chatbot.classList.remove('active');
-          }, 800);
-        }
+  setTimeout(() => {
+    chatbot.classList.remove('active');
+    chatbotToggle.classList.remove('hide');
+  }, 800);
+}
         return;
       }
     }
