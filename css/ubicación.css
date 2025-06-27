@@ -1,0 +1,161 @@
+body {
+    background: #000000;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.navbar-custom {
+    background-color: rgba(223, 8, 8, 0.712);
+    border-radius: 45px;
+    color: white;
+    padding: 10px;
+    margin: 20px 25px;
+    z-index: 10;
+    position: relative;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+    color: white !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: lightgray !important;
+}
+
+.main-content {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(0,0,0,0.18);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+    color: #fff;
+    border: none;
+    margin-bottom: 32px;
+}
+
+
+.card.h-100.shadow.p-3 {
+    margin-right: 36px;
+    color: antiquewhite;
+    text-align: justify;
+}
+
+.row.g-4 .col-md-8:first-of-type {
+    margin-top: 4rem;
+}
+
+.card-img-top {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    max-height: 260px;
+}
+
+.card-body {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.card-title {
+    color: #df0808;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+   
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.98rem;
+    padding: 6px 18px;
+    border-radius: 8px;
+    background: transparent;
+    color: #df0808;
+    border: 1.5px solid #df0808;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.btn-mapa:hover {
+    background: #df0808;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-outline-danger {
+  margin-top: 3rem;
+}
+
+.ratio {
+    min-height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .card-img-top {
+        max-height: 180px;
+    }
+    .ratio {
+        min-height: 160px;
+    }
+}
+
+
+
+
