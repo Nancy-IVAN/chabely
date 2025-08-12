@@ -365,7 +365,7 @@ body {
 }
 
 .valores-img:hover {
-    transform: scale(1.1); /* Agranda la imagen al pasar el cursor */
+    transform: scale(1.1); 
 }
 
 
