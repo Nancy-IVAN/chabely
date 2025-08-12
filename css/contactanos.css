@@ -100,7 +100,7 @@ body, .container, .main-content {
 }
 
 
-/* Cards alineadas horizontalmente y del mismo alto */
+
 .deck-cards.fan-style {
   display: flex;
   flex-direction: row;
@@ -129,7 +129,7 @@ body, .container, .main-content {
   justify-content: flex-end;
 }
 
-/* Responsive: en móvil se apilan verticalmente */
+
 @media (max-width: 1000px) {
   .deck-cards.fan-style {
     flex-direction: column;

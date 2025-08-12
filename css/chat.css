@@ -10,15 +10,19 @@
   overflow: hidden;
   font-family: sans-serif;
   background: #0c0101;
-  display: none;
+  display: none; /* Oculto por defecto */
   flex-direction: column;
+  z-index: -1; /* Por defecto, detrás de todo */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
+
 .chatbot.active {
-  display: flex;
+  display: flex; /* Se muestra cuando está activo */
+  z-index: 9999; /* Encima de todo */
 }
 
 .chat-header {
-  background: #ff1100;
+  background: #fd2b1cc2;
   color: rgb(8, 1, 1);
   padding: 18px;
   font-size: 1.3rem;
@@ -44,41 +48,140 @@
   color: #222;
   outline: none;
   flex-shrink: 0;
-  /* Esto asegura que el input esté abajo */
 }
 
-/* Cambia el tamaño y elimina la orilla blanca del botón flotante */
+/* --- BOTÓN FLOTANTE DEL CHAT --- */
 .chatbot-toggle {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 150px;
-  height: 180px;
-  border-radius: 50%;
+  width: 120px;
+  height: 100px;
+  border-radius: 40%;
   background: none;
   box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 10000; /* Siempre encima del contenido */
   border: none;
   padding: 0;
   transition: opacity 0.2s;
 }
+
 .chatbot-toggle.hide {
   opacity: 0;
   pointer-events: none;
 }
 
 .chatbot-toggle video {
-  width: 110px;      /* Más grande */
-  height: 100px;     /* Más grande */
+  width: 110px; /* Tamaño ajustado */
+  height: 200px; /* Tamaño ajustado */
   object-fit: cover;
   border-radius: 50%;
   border: none;
   background: none;
   box-shadow: none;
   display: block;
-  pointer-events: none; /* El video no bloquea el click del botón */
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .chatbot {
+    width: 90%;
+    height: 800px;
+  }
+}
+
+/* Agrega esto a tu archivo CSS principal */
+.footer-contacto {
+  width: 100%;
+  background: rgba(223, 8, 8, 0.712);
+  color: #fff;
+  text-align: center;
+  padding: 22px 0 16px 0;
+  font-size: 1.08rem;
+  margin-top: 48px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+}
+
+.footer-contacto-box {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-contacto-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.footer-contacto-datos span {
+  background: rgba(255,255,255,0.08);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.footer-contacto-redes {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+}
+
+.footer-contacto-redes a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.footer-contacto-redes a:hover {
+  color: #ffe600;
+}
+
+.footer-icon {
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.footer-contacto a {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-contacto-box {
+    max-width: 98vw;
+    font-size: 0.98rem;
+    gap: 8px;
+  }
+  .footer-contacto-datos {
+    gap: 8px;
+  }
+  .footer-contacto-redes {
+    gap: 12px;
+  }
+}
+
+.card-img-horizontal[src="../img/14.png"] {
+  width: 60%; /* Reduce el ancho al 80% del contenedor */
+  height: auto; /* Mantiene las proporciones originales */
+  object-fit: contain; /* Ajusta la imagen para que se vea completa */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  display: block; /* Asegura que se comporte como un bloque */
+  border-radius: 8px; /* Opcional: bordes redondeados */
 }

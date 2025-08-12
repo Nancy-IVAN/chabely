@@ -49,6 +49,7 @@ body {
 .container {
     margin-top: 40px;
     margin-bottom: 40px;
+    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
 }
 
 
@@ -112,6 +113,15 @@ body {
     border-radius: 18px 0 0 18px;
     margin: 0 auto;
     display: block;
+}
+
+.card-img-horizontal[src="../img/14.png"] {
+  width: 80%; /* Reduce el ancho al 80% del contenedor */
+  height: auto; /* Mantiene las proporciones originales */
+  object-fit: contain; /* Ajusta la imagen para que se vea completa */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  display: block; /* Asegura que se comporte como un bloque */
+  border-radius: 8px; /* Opcional: bordes redondeados */
 }
 
 .card-body {
@@ -190,6 +200,54 @@ body {
     width: 100%;
 }
 
+/* Asegúrate de que el body y el contenedor principal ocupen toda la altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal */
+body > .main-content {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+}
+
+/* Footer */
+.footer-contacto {
+  width: 800%; /* Ocupa todo el ancho */
+  background: rgba(223, 8, 8, 0.712); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  text-align: center;
+  padding: 22px 0 16px 0; /* Espaciado interno */
+  font-size: 1.08rem; /* Tamaño de fuente */
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08); /* Sombra */
+  margin: 0; /* Elimina cualquier margen */
+  position: relative;
+}
+
+/* --- CHATBOT --- */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 420px;
+  height: 540px;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #0c0101;
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  z-index: -1; /* Por defecto, detrás de todo */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.chatbot.active {
+  display: flex; /* Se muestra cuando está activo */
+  z-index: 9999; /* Encima de todo */
+}
 
 @media (max-width: 1200px) {
     .horizontal-card {

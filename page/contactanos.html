@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/contactanos.css">
     <link rel="stylesheet" href="../css/chat.css">
+   
 </head>
 <body>
     
@@ -37,7 +38,7 @@
     
     <div class="container my-5">
   <div class="deck-cards fan-style">
-    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;">
+    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;" id="cardVentas">
       <img src="../img/punto-de-venta.png" class="card-img-top" alt="Ventas">
       <div class="card-body">
         <h5 class="card-title" style="color:#df0808;">Ventas</h5>
@@ -50,7 +51,7 @@
         <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#formVentas">Enviar correo</button>
       </div>
     </div>
-    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;">
+    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;" id="cardTalento">
       <img src="../img/busqueda-de-talentos.png" class="card-img-top" alt="Soporte">
       <div class="card-body">
         <h5 class="card-title" style="color:#df0808;">Talento Humano</h5>
@@ -63,7 +64,7 @@
         <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#formTalento">Enviar correo</button>
       </div>
     </div>
-    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;">
+    <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;" id="cardClientes">
       <img src="../img/llamada-telefonica.png" class="card-img-top" alt="Atención a Clientes">
       <div class="card-body">
         <h5 class="card-title" style="color:#df0808;">Atención a Clientes</h5>
@@ -166,10 +167,9 @@
   </div>
 </div>
 
-
-<!-- Botón flotante -->
+  <!-- Botón flotante -->
 <button class="chatbot-toggle" id="chatbotToggle">
-  <video src="../img/chat.mp4" autoplay loop muted playsinline style="width:350px; height:210px; border-radius:50%; object-fit:cover; border:none; box-shadow:none; background:none;"></video>
+  <video src="../img/chat.mp4" autoplay loop muted playsinline style="width:120px; height:130px; border-radius:50%; object-fit:cover; border:none; box-shadow:none; background:none;"></video>
 </button>
 <!-- Chatbot -->
 <div class="chatbot" id="chatbot">
@@ -177,6 +177,7 @@
   <div class="chat-body" id="chat-body"></div>
   <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." autocomplete="off" />
 </div>
+
 
 <script>
 function enviarCorreo(area) {
@@ -211,6 +212,6 @@ function enviarCorreo(area) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="../in.js"></script>
-    <script src="../js/chatbot.js"></script>
+  <script src="../js/chatbot.js"></script>
 </body>
 </html>

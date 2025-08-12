@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatbot = document.getElementById('chatbot');
   const chatbotToggle = document.getElementById('chatbotToggle');
 
-  // Abrir chat al presionar el video y ocultar el botón flotante
+  
   chatbotToggle.onclick = function(e) {
     chatbot.classList.add('active');
     chatbotToggle.classList.add('hide');
@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   };
 
-  // Evita que los clics dentro del chat cierren el chat
+  
   chatbot.addEventListener('mousedown', function(e) {
     e.stopPropagation();
   });
 
-  // Cerrar chat al hacer click fuera del chat y del botón, y mostrar el video de nuevo
+  
   document.addEventListener('mousedown', function(e) {
     if (
       chatbot.classList.contains('active') &&
@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         claves: ["admin"],
-        respuesta: "Nancy María Moreno Sixto"
+        respuesta: "Nancy Moreno"
       },
       {
-        claves: ["papeles", "documentacion", "requisitos"],
+        claves: ["papeles", "documentacion", "requisitos","requisito", "documentos"],
         respuesta: "Solicitud elaborada, Acta de Nacimiento, Comprobante de estudios, Constancias de trabajo ,comprobante de domicilio, identificación oficial, CURP, RFC, NSS y Constancia de Situaion Fiscal (actualizada 2025)."
       },
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 {
   claves: ["quién eres", "quien eres", "te llamas"],
-  respuesta: "¡Soy BelyBot! Un asistente virtual diseñado para ayudarte con información sobre la empresa."
+  respuesta: "¡Soy ChabelyBot! Un asistente virtual diseñado para ayudarte con información sobre la empresa."
 },
 {
   claves: ["dias festivos", "descansos", "vacaciones"],
@@ -117,6 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
 {
   claves: ["comedor", "comida", "almuerzo", "desayuno"],
   respuesta: "Contamos con un comedor subsidiado."
+},
+{
+  claves: ["en que se especializan", "que hacen", "a que se dedican"],
+  respuesta: "Nos especializamos en la fabricación de componentes metalmecánicos de alta calidad para la industria  y otros sectores."
 },
 {
   claves: ["historia", "historia de la empresa", "cuando se fundo","fundada"],

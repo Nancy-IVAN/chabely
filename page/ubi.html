@@ -6,6 +6,7 @@
     <title>Ubicaciónes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/ubicación.css">
+    <link rel="stylesheet" href="../css/chat.css">
 </head>
 <body>
     
@@ -24,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="../page/acerca.html">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link" href="../page/producto.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../page/contactanos.html">Contáctanos</a></li>
+            
                     <li class="nav-item"><a class="nav-link" href="../page/ubi.html">Ubicaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="../page/work.html">Bolsa de trabajo</a></li>
                 </ul>
@@ -71,8 +72,56 @@
       </div>
     </div>
 
+   
+ <!-- Botón flotante -->
+<button class="chatbot-toggle" id="chatbotToggle">
+  <video src="../img/chat.mp4" autoplay loop muted playsinline style="width:120px; height:130px; border-radius:50%; object-fit:cover; border:none; box-shadow:none; background:none;"></video>
+</button>
+
+<!-- Chatbot -->
+<div class="chatbot" id="chatbot">
+  <div class="chat-header">ChabelyBot 🤖</div>
+  <div class="chat-body" id="chat-body"></div>
+  <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." autocomplete="off" />
+</div>
+
+<!-- Footer de contacto -->
+<footer class="footer-contacto">
+  <div class="footer-contacto-box">
+    <div class="footer-contacto-datos">
+      <span>
+        <strong><a href="../page/contactanos.html" style="color:#fff; text-decoration:underline;">Ventas</a></strong>: 
+        <a href="https://wa.me/5214273787544" target="_blank" style="color:#fff; text-decoration:none;">(427) 378-7544</a>
+      </span>
+      <span>
+        <strong><a href="../page/contactanos.html" style="color:#fff; text-decoration:underline;">Talento Humano</a></strong>: 
+        <a href="https://wa.me/5214271234567" target="_blank" style="color:#fff; text-decoration:none;">(427) 123-4567</a>
+      </span>
+      <span>
+        <strong><a href="../page/contactanos.html" style="color:#fff; text-decoration:underline;">Atención a Clientes</a></strong>: 
+        <a href="https://wa.me/5214277654321" target="_blank" style="color:#fff; text-decoration:none;">(427) 765-4321</a>
+      </span>
+      <span>
+        <strong><a href="../page/contactanos.html" style="color:#fff; text-decoration:underline;">WhatsApp</a></strong>: 
+        <a href="https://wa.me/5214271140399" target="_blank" style="color:#fff; text-decoration:none;">427 114 0399</a>
+      </span>
+      <span>
+        <strong>Email:</strong> ventas@chabely.com.mx
+      </span>
+    </div>
+    <div class="footer-contacto-redes">
+      <a href="https://www.facebook.com/chabelycomponentes" target="_blank">
+        <img src="../img/facebook.png" alt="Facebook" class="footer-icon"> Facebook
+      </a>
+      <a href="https://www.linkedin.com/company/chabelycomponentes" target="_blank">
+        <img src="../img/linkedin.png" alt="LinkedIn" class="footer-icon"> LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="../in.js"></script>
+   <script src="../js/chatbot.js"></script>
 </body>
 </html>
