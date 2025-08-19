@@ -48,7 +48,7 @@
           Email: ventas@chabely.com<br>
           Horario: Lun-Vie
         </p>
-        <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#formVentas">Enviar correo</button>
+        <button class="btn btn-outline-danger" onclick="enviarWhatsApp('ventas')">Enviar WhatsApp</button>
       </div>
     </div>
     <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;" id="cardTalento">
@@ -61,7 +61,7 @@
           Email: morenonacy410@gmail.com<br>
           Horario: Lun-Vie 
         </p>
-        <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#formTalento">Enviar correo</button>
+        <button class="btn btn-outline-danger" onclick="enviarWhatsApp('talento')">Enviar WhatsApp</button>
       </div>
     </div>
     <div class="card h-100 shadow text-center" style="max-width: 420px; margin: 0 auto;" id="cardClientes">
@@ -74,7 +74,7 @@
           Email: clientes@chabely.com<br>
           Horario: Lun-Vie 
         </p>
-        <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#formClientes">Enviar correo</button>
+        <button class="btn btn-outline-danger" onclick="enviarWhatsApp('clientes')">Enviar WhatsApp</button>
       </div>
     </div>
   </div>
@@ -191,7 +191,7 @@ function enviarCorreo(area) {
     correo = document.getElementById('ventas-email').value;
     mensaje = document.getElementById('ventas-mensaje').value;
   } else if(area === 'talento') {
-    email = 'talentohumano@chabely.com';
+    email = 'morenonancy410@gmail.com';
     nombre = document.getElementById('talento-nombre').value;
     correo = document.getElementById('talento-email').value;
     mensaje = document.getElementById('talento-mensaje').value;
@@ -206,6 +206,26 @@ function enviarCorreo(area) {
   const subject = encodeURIComponent('Contacto desde la web - ' + nombre);
   const body = encodeURIComponent('Nombre: ' + nombre + '\nCorreo: ' + correo + '\n\nMensaje:\n' + mensaje);
   window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
+function enviarWhatsApp(area) {
+  let numero = '';
+  let mensaje = '';
+
+  if (area === 'ventas') {
+    numero = '5214273787544'; // Número de WhatsApp para Ventas
+    mensaje = 'Hola, me gustaría obtener más información sobre ventas.';
+  } else if (area === 'talento') {
+    numero = '5214272223344'; // Número de WhatsApp para Talento Humano
+    mensaje = 'Hola, estoy interesado en oportunidades laborales.';
+  } else if (area === 'clientes') {
+    numero = '5214275556677'; // Número de WhatsApp para Atención a Clientes
+    mensaje = 'Hola, necesito ayuda con un servicio.';
+  }
+
+  // Redirige al usuario a WhatsApp
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
 }
 </script>
 
